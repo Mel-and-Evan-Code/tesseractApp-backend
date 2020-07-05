@@ -24,8 +24,7 @@ app.post('/upload', function(req, res) {
   }
 
   // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
-  let sampleFile = req.files.sampleFile;
-  console.log(req.files,sampleFile)
+  let sampleFile = req.files.file;
 
   // Use the mv() method to place the file somewhere on your server
   sampleFile.mv('./images/'+ sampleFile.name, function(err) {
